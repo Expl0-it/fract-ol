@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/10 21:04:59 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/12 19:27:42 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ typedef struct	s_img_data
 	int		line_length;
 	int		endian;
 }				t_img_data;
+
+typedef struct	s_complex
+{
+	double	real;
+	double	imaginary;
+}				t_complex;
 
 // src/my_put_pixel.c
 void	my_pixel_put(t_img_data *data, int x, int y, int color);
