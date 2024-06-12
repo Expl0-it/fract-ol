@@ -6,13 +6,11 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 11:37:04 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/11 16:43:16 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/12 19:39:23 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/includ.h"
-#include "mlx_linux/mlx.h"
-#include <unistd.h>
+#include "includes/fractol.h"
 
 int	main(void)
 {
