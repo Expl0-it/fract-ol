@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 11:37:04 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/11 00:01:25 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/11 16:43:16 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	main(void)
 	for (int i=0; i <=100; i++)
 	{
 		my_pixel_put(&img, 500 + i, 350, 0x00FF0000);
-		mlx_pixel_put(mlx, mlx_win, 500 + i, 350 + i, 0x00FF0000);
 	}
-	sleep(1);
 //	mlx_pixel_put(mlx, mlx_win, 5, 5, 0x00FF0000);
 //	my_pixel_put(&img, 5, 5, 0x00FF0000);
 	mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
