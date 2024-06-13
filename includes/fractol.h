@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/12 20:25:53 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/13 11:27:59 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,8 @@ typedef struct s_fractol_data
 
 // src/my_put_pixel.c
 void	my_pixel_put(t_img_data *img, int x, int y, int color);
+
+// src/fractol_data_init.c
+void	fractol_data_init(t_fractol_data *data);
 
 #endif
