@@ -67,6 +67,14 @@ typedef struct s_fractal
 	char	*p_name;
 }				t_fractal;
 
+typedef struct s_fractol_data
+{
+	t_mlx_data	mlx;
+	t_img_data	img;
+	t_fractal	fractal;
+	t_complex	complex_nb;
+}				t_fractol_data;
+
 // src/my_put_pixel.c
 void	my_pixel_put(t_img_data *img, int x, int y, int color);
 
