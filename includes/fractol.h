@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/12 20:04:00 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:25:53 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,15 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+# include <math.h>
 // TODO: DLEATE LATER AFTER ADDING PRINTF TO LIBFT
 //# include "../libft/includes/ft_printf.h"
 # include "../libft/libft.h"
 # include "../mlx_linux/mlx.h"
+
+# define ERROR_MSG "Posible program input:\n\
+\t./fractol mandelbrot\n\
+\t./fractol julia <val_1> <val_2>\n"
 
 # define WIDTH 500
 # define HIGHT 500
@@ -30,7 +35,8 @@
 typedef enum e_errors
 {
 	OK = 0,
-	MALLOC_ERROR = 1
+	MALLOC_ERROR = 1,
+	INVALID_ARGUMENTS = 2
 }				t_errors;
 
 typedef struct s_img_data
@@ -62,6 +68,6 @@ typedef struct s_fractal
 }				t_fractal;
 
 // src/my_put_pixel.c
-void	my_pixel_put(t_img_data *data, int x, int y, int color);
+void	my_pixel_put(t_img_data *img, int x, int y, int color);
 
 #endif
