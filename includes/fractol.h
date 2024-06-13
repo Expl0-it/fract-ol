@@ -41,8 +41,8 @@ typedef enum e_errors
 
 typedef struct s_img_data
 {
-	void	*img;
-	char	*addr;
+	void	*p_img;
+	char	*p_addr;
 	int		bpp;
 	int		line_len;
 	int		endian;
@@ -56,15 +56,15 @@ typedef struct s_complex
 
 typedef struct s_mlx_data
 {
-	void		*mlx_conn;
-	void		*mlx_win;
+	void		*p_mlx_conn;
+	void		*p_mlx_win;
 	t_img_data	img_data;
 
 }				t_mlx_data;
 
 typedef struct s_fractal
 {
-	char	*name;
+	char	*p_name;
 }				t_fractal;
 
 // src/my_put_pixel.c
