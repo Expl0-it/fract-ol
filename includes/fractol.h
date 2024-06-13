@@ -30,7 +30,7 @@
 \t./fractol julia <val_1> <val_2>\n"
 
 # define WIDTH 500
-# define HIGHT 500
+# define HEIGHT 500
 
 typedef enum e_errors
 {
