@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/13 11:27:59 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 20:29:14 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@
 \t./fractol mandelbrot\n\
 \t./fractol julia <val_1> <val_2>\n"
 
-# define WIDTH 500
-# define HEIGHT 500
+# define WIDTH 800
+# define HEIGHT 800
 
 typedef enum e_errors
 {
@@ -66,6 +66,15 @@ typedef struct s_fractal
 {
 	char	*p_name;
 }				t_fractal;
+
+typedef struct s_scale
+{
+	double	unscaled_num;
+	double	new_min;
+	double	new_max;
+	double	old_min;
+	double	old_max;
+}				t_scale;
 
 typedef struct s_fractol_data
 {
