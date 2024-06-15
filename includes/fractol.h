@@ -32,6 +32,9 @@
 # define WIDTH 800
 # define HEIGHT 800
 
+# ifndef ITERATIONS
+#  define ITERATIONS 42
+# endif
 
 // NOTE: COLORS (stolen from chatgpt)
 # define BLACK       0x000000  // RGB(0, 0, 0)
