@@ -66,4 +66,6 @@ void	fractal_render(t_fractol_data *data)
 			is_in_fractal_set(horizontal, vertical, data);
 		}
 	}
+	mlx_put_image_to_window(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, \
+						data->img.p_img, 0, 0);
 }
