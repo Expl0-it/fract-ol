@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 20:44:50 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 21:00:36 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,6 @@ typedef struct s_fractal
 	char	*p_name;
 }				t_fractal;
 
-typedef struct s_scale
-{
-	double	unscaled_num;
-	double	new_min;
-	double	new_max;
-	double	old_min;
-	double	old_max;
-}				t_scale;
-
 typedef struct s_fractol_data
 {
 	t_mlx_data	mlx;
@@ -91,6 +82,6 @@ void	my_pixel_put(t_img_data *img, int x, int y, int color);
 void	fractol_data_init(t_fractol_data *data);
 
 // src/math_utils.c
-double	map(t_scale scale_values);
+double	map(double unscaled, double new_min, double new_max, double old_max);
 
 #endif
