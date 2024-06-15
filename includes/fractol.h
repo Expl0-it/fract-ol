@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 21:00:36 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 22:56:09 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,13 +104,19 @@ typedef struct s_fractol_data
 	t_complex	complex_nb;
 }				t_fractol_data;
 
+// src/math_utils.c
+double		map(double unscaled, double new_min, \
+				double new_max, double old_max);
+t_complex	sum_complex(t_complex z1, t_complex z2);
+t_complex	square_complex(t_complex z);
+
 // src/my_put_pixel.c
-void	my_pixel_put(t_img_data *img, int x, int y, int color);
+void		my_pixel_put(t_img_data *img, int x, int y, int color);
 
 // src/fractol_data_init.c
-void	fractol_data_init(t_fractol_data *data);
+void		fractol_data_init(t_fractol_data *data);
 
-// src/math_utils.c
-double	map(double unscaled, double new_min, double new_max, double old_max);
+// src/fractal_render.c
+void	fractal_render(t_fractol_data *data);
 
 #endif
