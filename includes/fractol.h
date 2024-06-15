@@ -91,7 +91,9 @@ typedef struct s_fractol_data_utils
 
 typedef struct s_fractal
 {
-	char	*p_name;
+	char					*p_name;
+
+	t_fractol_data_utils	utils;
 }				t_fractal;
 
 typedef struct s_fractol_data
