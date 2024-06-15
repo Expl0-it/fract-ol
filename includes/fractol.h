@@ -83,11 +83,11 @@ typedef struct s_mlx_data
 
 }				t_mlx_data;
 
-typedef struct s_fractol_data_utils
+typedef struct s_fractal_utils
 {
 	double	escape_value;
 
-}				t_fractol_data_utils;
+}				t_fractal_utils;
 
 typedef struct s_fractal
 {
