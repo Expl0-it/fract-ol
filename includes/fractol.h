@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 20:43:57 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 20:44:50 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ void	my_pixel_put(t_img_data *img, int x, int y, int color);
 void	fractol_data_init(t_fractol_data *data);
 
 // src/math_utils.c
-double	apply_scale(t_scale scale_values);
+double	map(t_scale scale_values);
 
 #endif

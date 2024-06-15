@@ -6,13 +6,13 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:23:51 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 20:41:14 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 20:44:52 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-double	apply_scale(t_scale scale_values)
+double	map(t_scale scale_values)
 {
 	double	new_difference;
 	double	old_difference;
