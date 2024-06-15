@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 10:43:48 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/13 11:44:33 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 22:45:30 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	init_events(t_fractol_data *data)
 
 static void	init_utils(t_fractol_data *data)
 {
-
+	data->fractal.utils.escape_value = 4;
 }
 
 void	fractol_data_init(t_fractol_data *data)
