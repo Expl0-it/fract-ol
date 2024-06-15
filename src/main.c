@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 19:38:09 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/13 11:24:38 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/15 23:00:51 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(int argc, char **argv)
 	{
 		data.fractal.p_name = argv[1];
 		fractol_data_init(&data);
+		fractal_render(&data);
+		mlx_loop(data.mlx.p_mlx_conn);
 	}
 	else
 	{
