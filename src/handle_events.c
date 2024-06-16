@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 21:23:43 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/16 22:12:09 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/16 23:14:54 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int	handle_key(int keysym, t_fractol_data *data)
 	if (keysym == XK_Escape)
 		handle_close(data);
 	else if (keysym == XK_Left)
-		data->events.shift_horizontal += 0.5;
+		data->events.shift_horizontal += (0.5 * data->events.zoom);
 	else if (keysym == XK_Right)
-		data->events.shift_horizontal -= 0.5;
+		data->events.shift_horizontal -= (0.5 * data->events.zoom);
 	else if (keysym == XK_Down)
-		data->events.shift_vertical += 0.5;
+		data->events.shift_vertical += (0.5 * data->events.zoom);
 	else if (keysym == XK_Up)
-		data->events.shift_vertical -= 0.5;
+		data->events.shift_vertical -= (0.5 * data->events.zoom);
 	else if (keysym == XK_plus)
 		data->fractal.utils.iterations_number += 10;
 	else if (keysym == XK_minus)
