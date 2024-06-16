@@ -37,13 +37,13 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 	c.real = map(horizontal, -2.0, +2.0, WIDTH);
 	c.imaginary = map(vertical, +2.0, -2.0, HEIGHT);
 	i = 0;
-	while (i < ITERATIONS)
+	while (i < data->fractal.utils.iterations_number)
 	{
 		z = sum_complex(square_complex(z), c);
 		if ((z.real * z.real) + (z.imaginary * z.imaginary) > \
 			data->fractal.utils.escape_value)
 		{
-			color = map(i, BLACK, WHITE, ITERATIONS);
+			color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
 			my_pixel_put(data->img.p_img, horizontal, vertical, color);
 //			mlx_pixel_put(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, horizontal, vertical, color);
 			return ;
