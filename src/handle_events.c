@@ -21,3 +21,22 @@ int	handle_close(t_fractol_data *data)
 	exit(OK);
 }
 
+int	handle_key(int keysym, t_fractol_data *data)
+{
+	if (keysym == XK_Escape)
+		handle_close(data);
+	else if (keysym == XK_Left)
+		data->events.shift_horizontal += 0.5;
+	else if (keysym == XK_Right)
+		data->events.shift_horizontal -= 0.5;
+	else if (keysym == XK_Down)
+		data->events.shift_vertical += 0.5;
+	else if (keysym == XK_Up)
+		data->events.shift_vertical -= 0.5;
+	else if (keysym == XK_plus)
+		data->fractal.utils.iterations_number += 10;
+	else if (keysym == XK_minus)
+		data->fractal.utils.iterations_number -= 10;
+	fractal_render(data);
+	return (0);
+}
