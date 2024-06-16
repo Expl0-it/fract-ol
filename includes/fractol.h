@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 22:56:09 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:24:26 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ typedef struct s_fractal_utils
 typedef struct s_fractal
 {
 	char			*p_name;
-
 	t_fractal_utils	utils;
 }				t_fractal;
 
@@ -111,6 +110,7 @@ typedef struct s_fractol_data
 	t_img_data	img;
 	t_fractal	fractal;
 	t_complex	complex_nb;
+	t_events	events;
 }				t_fractol_data;
 
 // src/math_utils.c
@@ -126,6 +126,10 @@ void		my_pixel_put(t_img_data *img, int x, int y, int color);
 void		fractol_data_init(t_fractol_data *data);
 
 // src/fractal_render.c
-void	fractal_render(t_fractol_data *data);
+void		fractal_render(t_fractol_data *data);
+
+// src/handle_events.c
+int			handle_close(t_fractol_data *data);
+int			handle_mouse(int button, int horizontal, int vertical, t_fractol_data *data);
 
 #endif
