@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 10:43:48 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 22:45:30 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:25:27 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ static void	init_mlx_data(t_fractol_data *data)
 
 static void	init_events(t_fractol_data *data)
 {
-
+	mlx_hook(data->mlx.p_mlx_conn, KeyPress, KeyPressMask, handle_key, data);
+	mlx_hook(data->mlx.p_mlx_conn, ButtonPress, ButtonPressMask, handle_mouse, data);
+	mlx_hook(data->mlx.p_mlx_conn, DestroyNotify, StructureNotifyMask, handle_close, data);
 }
 
 static void	init_utils(t_fractol_data *data)
