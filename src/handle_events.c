@@ -40,3 +40,13 @@ int	handle_key(int keysym, t_fractol_data *data)
 	fractal_render(data);
 	return (0);
 }
+
+int	handle_mouse(int button, int horizontal, int vertical, t_fractol_data *data)
+{
+	if (Button5 == button)
+		data->events.zoom *= 0.95;
+	else if (Button4 == button)
+		data->events.zoom *= 1.05;
+	fractal_render(data);
+	return (0);
+}
