@@ -45,6 +45,10 @@ static void	init_events(t_fractol_data *data)
 static void	init_utils(t_fractol_data *data)
 {
 	data->fractal.utils.escape_value = 4;
+	data->fractal.utils.iterations_number = ITERATIONS;
+	data->events.shift_horizontal = 0.0;
+	data->events.shift_vertical = 0.0;
+	data->events.zoom = 1.0;
 }
 
 void	fractol_data_init(t_fractol_data *data)
