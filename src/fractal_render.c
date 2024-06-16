@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 23:25:21 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:32:32 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 
 	z.real = 0.0;
 	z.imaginary = 0.0;
-	c.real = map(horizontal, -2.0, +2.0, WIDTH);
-	c.imaginary = map(vertical, +2.0, -2.0, HEIGHT);
+	c.real =(map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal; 
+	c.imaginary = (map(vertical, +2.0, -2.0, HEIGHT) * data->events.zoom) + data->events.shift_vertical;
 	i = 0;
 	while (i < data->fractal.utils.iterations_number)
 	{
