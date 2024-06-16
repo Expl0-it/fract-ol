@@ -20,6 +20,8 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <math.h>
+# include <X11/X.h>
+# include <X11/keysym.h>
 // TODO: DLEATE LATER AFTER ADDING PRINTF TO LIBFT
 //# include "../libft/includes/ft_printf.h"
 # include "../libft/libft.h"
