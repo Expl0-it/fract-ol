@@ -95,7 +95,7 @@ typedef struct s_events
 typedef struct s_fractal_utils
 {
 	double	escape_value;
-
+	int		iterations_number;
 }				t_fractal_utils;
 
 typedef struct s_fractal
