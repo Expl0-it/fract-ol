@@ -85,6 +85,13 @@ typedef struct s_mlx_data
 
 }				t_mlx_data;
 
+typedef struct s_events
+{
+	double	shift_horizontal;
+	double	shift_vertical;
+	double	zoom;
+}				t_events;
+
 typedef struct s_fractal_utils
 {
 	double	escape_value;
