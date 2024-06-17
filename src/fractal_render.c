@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/17 11:29:12 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:51:10 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,15 @@ void	fractal_render(t_fractol_data *data)
 	int	vertical;
 
 	vertical = 0;
-	while (vertical++ < HEIGHT)
+	while (vertical < HEIGHT - 1)
 	{
 		horizontal = 0;
-		while (horizontal++ < WIDTH)
+		while (horizontal < WIDTH - 1)
 		{
 			is_in_fractal_set(horizontal, vertical, data);
+			horizontal++;
 		}
+		vertical++;
 	}
 	mlx_put_image_to_window(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, \
 						data->img.p_img, 0, 0);
