@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/17 11:51:10 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/17 12:00:55 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ void	fractal_render(t_fractol_data *data)
 	int	vertical;
 
 	vertical = 0;
-	while (vertical < HEIGHT - 1)
+	while (vertical < HEIGHT)
 	{
 		horizontal = 0;
-		while (horizontal < WIDTH - 1)
+		while (horizontal < WIDTH)
 		{
 			is_in_fractal_set(horizontal, vertical, data);
 			horizontal++;
