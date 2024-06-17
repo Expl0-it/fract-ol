@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/16 22:24:26 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/17 10:53:48 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void		fractal_render(t_fractol_data *data);
 
 // src/handle_events.c
 int			handle_close(t_fractol_data *data);
+int			handle_key(int keysym, t_fractol_data *data);
 int			handle_mouse(int button, int horizontal, int vertical, t_fractol_data *data);
 
 #endif
