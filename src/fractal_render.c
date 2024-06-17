@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/16 22:32:32 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:29:12 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 			data->fractal.utils.escape_value)
 		{
 			color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
-			my_pixel_put(data->img.p_img, horizontal, vertical, color);
+			my_pixel_put(&data->img, horizontal, vertical, color);
 //			mlx_pixel_put(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, horizontal, vertical, color);
 			return ;
 		}
 		i++;
 	}
-	my_pixel_put(data->img.p_img, horizontal, vertical, LIME_SHOCK);
+	my_pixel_put(&data->img, horizontal, vertical, LIME_SHOCK);
 //	mlx_pixel_put(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, horizontal, vertical, LIME_SHOCK);
 }
 
