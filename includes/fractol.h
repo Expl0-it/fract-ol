@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 12:57:05 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/20 13:10:34 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,8 @@ typedef struct s_fractal
 {
 	char			*p_name;
 	t_fractal_utils	utils;
+	double			julia_x;
+	double			julia_y;
 }				t_fractal;
 
 typedef struct s_fractol_data
