@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/17 12:00:55 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:59:02 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 
 	z.real = 0.0;
 	z.imaginary = 0.0;
-	c.real =(map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal; 
+	c.real = (map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal;
 	c.imaginary = (map(vertical, +2.0, -2.0, HEIGHT) * data->events.zoom) + data->events.shift_vertical;
 	i = 0;
 	while (i < data->fractal.utils.iterations_number)
@@ -45,13 +45,11 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 		{
 			color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
 			my_pixel_put(&data->img, horizontal, vertical, color);
-//			mlx_pixel_put(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, horizontal, vertical, color);
 			return ;
 		}
 		i++;
 	}
 	my_pixel_put(&data->img, horizontal, vertical, LIME_SHOCK);
-//	mlx_pixel_put(data->mlx.p_mlx_conn, data->mlx.p_mlx_win, horizontal, vertical, LIME_SHOCK);
 }
 
 void	fractal_render(t_fractol_data *data)
