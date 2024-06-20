@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/17 10:53:48 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:57:05 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 # define HEIGHT 800
 
 # ifndef ITERATIONS
-#  define ITERATIONS 42
+#  define ITERATIONS 50
 # endif
 
 // NOTE: COLORS (stolen from chatgpt)
@@ -119,6 +119,9 @@ double		map(double unscaled, double new_min, \
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
 
+// src/ft_atod.c
+double		ft_atod(char *s);
+
 // src/my_put_pixel.c
 void		my_pixel_put(t_img_data *img, int x, int y, int color);
 
@@ -131,6 +134,7 @@ void		fractal_render(t_fractol_data *data);
 // src/handle_events.c
 int			handle_close(t_fractol_data *data);
 int			handle_key(int keysym, t_fractol_data *data);
-int			handle_mouse(int button, int horizontal, int vertical, t_fractol_data *data);
+int			handle_mouse(int button, int horizontal, int vertical, \
+				t_fractol_data *data);
 
 #endif
