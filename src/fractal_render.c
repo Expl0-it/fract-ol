@@ -6,11 +6,25 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 12:59:02 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/20 13:58:21 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+static void	mandelbrot_or_julia(t_complex *z, t_complex *c, t_fractol_data *data)
+{
+	if (!ft_strncmp(data->fractal.p_name, "julia", 5))
+	{
+		c->real = data->fractal.julia_x;
+		c->imaginary = data->fractal.julia_y;
+	}
+	else
+	{
+		c->real = z->real;
+		c->imaginary = z->imaginary;
+	}
+}
 
 /*
  * NOTE: MANDELBROT SET
@@ -32,10 +46,9 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 	int			i;
 	int			color;
 
-	z.real = 0.0;
-	z.imaginary = 0.0;
-	c.real = (map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal;
-	c.imaginary = (map(vertical, +2.0, -2.0, HEIGHT) * data->events.zoom) + data->events.shift_vertical;
+	z.real = (map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal;
+	z.imaginary = (map(vertical, +2.0, -2.0, HEIGHT) * data->events.zoom) + data->events.shift_vertical;
+	mandelbrot_or_julia(&z, &c, data);
 	i = 0;
 	while (i < data->fractal.utils.iterations_number)
 	{
