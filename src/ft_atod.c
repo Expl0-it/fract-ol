@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:26:47 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 11:39:14 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:55:42 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ double	ft_atod(char *s)
 	int		sign;
 
 	int_part = 0;
-	float_part = 0;
+	float_part = 0.0;
 	sign = 1;
-	power = 1;
+	power = 1.0;
 	while ((*s >= 9 && *s <= 13) || 32 == *s)
 		s++;
 	while ('-' == *s || '+' == *s)
