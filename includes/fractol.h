@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 13:10:34 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:10:55 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ typedef struct s_mlx_data
 {
 	void		*p_mlx_conn;
 	void		*p_mlx_win;
-	t_img_data	img_data;
 
 }				t_mlx_data;
 

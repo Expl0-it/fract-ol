@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 21:23:43 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 12:27:37 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:13:45 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	handle_close(t_fractol_data *data)
 {
-	mlx_destroy_image(data->mlx.p_mlx_conn, data->mlx.img_data.p_img);
+
+	mlx_destroy_image(data->mlx.p_mlx_conn, data->img.p_img);
 	mlx_destroy_window(data->mlx.p_mlx_conn, data->mlx.p_mlx_win);
 	mlx_destroy_display(data->mlx.p_mlx_conn);
 	free(data->mlx.p_mlx_conn);
