@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/27 10:55:51 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 11:06:39 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ double		map(double unscaled, double new_min, \
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
 int			parse_rgb(int red, int green, int blue);
-int	count_gradient(int i, t_fractol_data *data);
+int			count_gradient(int i, t_fractol_data *data);
 
 // src/ft_atod.c
 double		ft_atod(char *s);

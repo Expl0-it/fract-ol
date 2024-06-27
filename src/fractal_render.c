@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/27 10:56:41 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 11:06:12 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static void	mandelbrot_or_julia(t_complex *z, t_complex *c, \
  * possible to change numer of loop iterations for the cost of
  * precision of rendered fractal
 */
+//other color calculation (no gradient)
+//color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
 static void	is_in_fractal_set(int horizontal, \
 					int vertical, t_fractol_data *data)
 {
@@ -60,7 +62,6 @@ static void	is_in_fractal_set(int horizontal, \
 		if ((z.real * z.real) + (z.imaginary * z.imaginary) > \
 			data->fractal.utils.escape_value)
 		{
-			//color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
 			color = count_gradient(i, data);
 			my_pixel_put(&data->img, horizontal, vertical, color);
 			return ;
