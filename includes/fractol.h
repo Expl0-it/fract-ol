@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:51:07 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/26 12:00:44 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 10:55:51 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@
 # define HOT_PINK        0xFF66B2
 # define ELECTRIC_BLUE   0x0066FF
 # define LAVA_RED        0xFF3300
+
+# ifndef BASE_COLOR
+#  define BASE_COLOR LIME_SHOCK
+# endif
 
 typedef enum e_errors
 {

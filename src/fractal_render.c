@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/26 12:02:48 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 10:56:41 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static void	is_in_fractal_set(int horizontal, \
 		}
 		i++;
 	}
-	my_pixel_put(&data->img, horizontal, vertical, LIME_SHOCK);
+	my_pixel_put(&data->img, horizontal, vertical, BASE_COLOR);
 }
 
 void	fractal_render(t_fractol_data *data)
