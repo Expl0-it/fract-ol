@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:23:51 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/15 21:45:47 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/26 12:00:18 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,22 @@ t_complex	square_complex(t_complex z)
 	res.real = (z.real * z.real) - (z.imaginary * z.imaginary);
 	res.imaginary = (2 * z.real * z.imaginary);
 	return (res);
+}
+
+int	parse_rgb(int red, int green, int blue)
+{
+	return (red << 16 | green << 8 | blue);
+}
+
+int	count_gradient(int i, t_fractol_data *data)
+{
+	int	red;
+	int	green;
+	int	blue;
+
+	map(i, 0, 1, data->fractal.utils.iterations_number);
+	red = 9 * (1 - i) * (i * i * i) * 255;
+	green = 15 * ((1 - i) * (1 - i)) * (i * i) * 255;
+	blue = 8.5 * ((1 - i) * (1 - i) * (1 - i)) * i * 255;
+	return (parse_rgb(red, green, blue));
 }
