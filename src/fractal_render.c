@@ -6,13 +6,14 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 19:56:16 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 13:58:21 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/26 12:02:48 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static void	mandelbrot_or_julia(t_complex *z, t_complex *c, t_fractol_data *data)
+static void	mandelbrot_or_julia(t_complex *z, t_complex *c, \
+								t_fractol_data *data)
 {
 	if (!ft_strncmp(data->fractal.p_name, "julia", 5))
 	{
@@ -39,15 +40,18 @@ static void	mandelbrot_or_julia(t_complex *z, t_complex *c, t_fractol_data *data
  * possible to change numer of loop iterations for the cost of
  * precision of rendered fractal
 */
-static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data)
+static void	is_in_fractal_set(int horizontal, \
+					int vertical, t_fractol_data *data)
 {
 	t_complex	z;
 	t_complex	c;
 	int			i;
 	int			color;
 
-	z.real = (map(horizontal, -2.0, +2.0, WIDTH) * data->events.zoom) + data->events.shift_horizontal;
-	z.imaginary = (map(vertical, +2.0, -2.0, HEIGHT) * data->events.zoom) + data->events.shift_vertical;
+	z.real = (map(horizontal, -2.0, +2.0, \
+			WIDTH) * data->events.zoom) + data->events.shift_horizontal;
+	z.imaginary = (map(vertical, +2.0, -2.0, \
+			HEIGHT) * data->events.zoom) + data->events.shift_vertical;
 	mandelbrot_or_julia(&z, &c, data);
 	i = 0;
 	while (i < data->fractal.utils.iterations_number)
@@ -56,7 +60,8 @@ static void	is_in_fractal_set(int horizontal, int vertical, t_fractol_data *data
 		if ((z.real * z.real) + (z.imaginary * z.imaginary) > \
 			data->fractal.utils.escape_value)
 		{
-			color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
+			//color = map(i, BLACK, WHITE, data->fractal.utils.iterations_number);
+			color = count_gradient(i, data);
 			my_pixel_put(&data->img, horizontal, vertical, color);
 			return ;
 		}
