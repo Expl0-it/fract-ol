@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 21:23:43 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/25 16:37:36 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 10:34:06 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	handle_key(int keysym, t_fractol_data *data)
 		data->events.shift_vertical -= (0.5 * data->events.zoom);
 	else if (keysym == XK_Up)
 		data->events.shift_vertical += (0.5 * data->events.zoom);
-	else if (keysym == XK_plus)
+	else if (keysym == XK_m)
 		data->fractal.utils.iterations_number += 10;
-	else if (keysym == XK_minus)
+	else if (keysym == XK_l)
 		data->fractal.utils.iterations_number -= 10;
 	fractal_render(data);
 	return (0);
