@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:23:51 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/26 12:00:18 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/06/27 10:29:03 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,15 @@ int	parse_rgb(int red, int green, int blue)
 
 int	count_gradient(int i, t_fractol_data *data)
 {
-	int	red;
-	int	green;
-	int	blue;
+	int		red;
+	int		green;
+	int		blue;
+	float	t;
 
-	map(i, 0, 1, data->fractal.utils.iterations_number);
-	red = 9 * (1 - i) * (i * i * i) * 255;
-	green = 15 * ((1 - i) * (1 - i)) * (i * i) * 255;
-	blue = 8.5 * ((1 - i) * (1 - i) * (1 - i)) * i * 255;
+	t = (float)i;
+	t = map(t, 0, 1, data->fractal.utils.iterations_number);
+	red = 9 * (1 - t) * (t * t * t) * 255;
+	green = 15 * ((1 - t) * (1 - t)) * (t * t) * 255;
+	blue = 8.5 * ((1 - t) * (1 - t) * (1 - t)) * t * 255;
 	return (parse_rgb(red, green, blue));
 }
