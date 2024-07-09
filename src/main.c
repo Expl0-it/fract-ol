@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 19:38:09 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/20 13:13:55 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/07/09 13:54:19 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	main(int argc, char **argv)
 {
 	t_fractol_data	data;
 
-	if (2 == argc && !ft_strncmp(argv[1], "mandelbrot", 10)
-		|| 4 == argc && !ft_strncmp(argv[1], "julia", 5))
+	if ((2 == argc && !ft_strncmp(argv[1], "mandelbrot", 10))
+		|| (4 == argc && !ft_strncmp(argv[1], "julia", 5)))
 	{
 		data.fractal.p_name = argv[1];
 		if (!ft_strncmp(argv[1], "julia", 5))
