@@ -6,7 +6,7 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 21:23:43 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/27 10:34:06 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:13:38 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	handle_key(int keysym, t_fractol_data *data)
 
 int	handle_mouse(int button, int horizontal, int vertical, t_fractol_data *data)
 {
+	while (horizontal > -1 && vertical > -1)
+		break ;
 	if (Button4 == button)
 		data->events.zoom *= 0.95;
 	else if (Button5 == button)
