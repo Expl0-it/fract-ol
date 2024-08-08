@@ -6,12 +6,13 @@
 /*   By: mamichal <mamichal@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:23:51 by mamichal          #+#    #+#             */
-/*   Updated: 2024/06/27 10:29:03 by mamichal         ###   ########.fr       */
+/*   Updated: 2024/08/08 08:29:59 by mamichal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
+// old min is assumed to be 0 (cause norminette)
 double	map(double unscaled, double new_min, double new_max, double old_max)
 {
 	double	old_min;
