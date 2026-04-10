@@ -2,6 +2,10 @@
 
 A graphical project developed as part of the **42 School curriculum**, focused on rendering and exploring mathematical fractals such as the **Mandelbrot** and **Julia** sets using a minimal graphics library.
 
+![mandelbrot_big](./img/mandelbrot_big.png)
+![mandelbrot_small](./img/mandelbrot_small.png)
+![julia](./img/julia.png)
+
 ---
 
 ## 📖 Overview
@@ -89,6 +93,7 @@ The program follows this general process:
      ```text
      z = z² + c
      ```
+
 3. **Determine divergence**
 
    * If `|z|` exceeds a threshold → point escapes
@@ -108,7 +113,6 @@ To build the project:
 * make
 * C compiler
 * X11 display server installed
-
 
 ### Compilation
 
