@@ -117,6 +117,9 @@ To build the project:
 ### Compilation
 
 ```bash id="frbuild1"
+cd ./mlx_linux
+./configure
+cd ..
 make
 ```
 
