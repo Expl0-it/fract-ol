@@ -16,6 +16,7 @@ FLAGS = -Wall -Wextra -Werror
 MLXFLAGS = -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
 RM = rm -fr
 INCLUDES = ./includes/fractol.h
+IFLAGS = -I ./includes -I ./libftPrintfGnl -I ./mlx_linux
 LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 MLX_PATH = ./mlx_linux
@@ -33,10 +34,10 @@ SRCS = src/fractal_render.c \
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -include $(INCLUDES)
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o} $(IFLAGS)
 
 ${NAME}: $(OBJS) ${LIBFT} $(MLXLIB)
-	${CC} ${FLAGS} $(MLXFLAGS) -o ${NAME} $(OBJS) ${LIBFT} $(MLX) -include $(INCLUDES)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT) $(MLX) $(IFLAGS) $(MLXFLAGS)
 	echo Compiling Base Executable
 
 all: ${NAME}
